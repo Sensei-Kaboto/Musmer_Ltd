@@ -1,0 +1,263 @@
+:root{
+    --bg-body:hwb(225 2% 84%);
+    --hero-first:#ffffff;
+    --hero-second: #ff6900;
+    --text1: #abb8c3;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+    --ft-logo:35px;
+    --line-height:80px;
+    --ft-weight:bold;
+    --transition: .5s;
+    --accent:var(--hero-second);
+
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--bs-font-sans-serif);
+   
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+
+.header {
+    display: inline;
+    gap: 2rem;
+    height: 100vh;
+    margin: 0;
+}
+
+.header__info{
+    /* font-size: 2rem; */
+
+
+}
+
+.header__nav {
+    background-color: var(--bg-body);
+    height: 80px;
+    width: 100%;
+}
+
+.hd__nav {
+    background-color: var(--bg-body);
+    display: flex;
+    overflow: hidden;
+    gap:0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item , .item ul li a {
+    color: white;
+    font-family: monospace;
+    font-size: 12px !important;
+  }
+  
+.item1 {
+
+}
+
+.item2 {
+    
+    margin-right: 20px;
+}
+
+
+
+label.logo {
+    color: var(--hero-first);
+    line-height: var(--line-height);
+    padding: 30px 100px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: var(--hero-second);
+
+    
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: var(--hero-first);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+nav .item ul li{
+    line-height: 10px;
+    margin: 0px;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+
+a.active, a:hover{
+    transition: .5s;
+    
+}
+
+ul.option a.active  {
+    color: var(--accent);
+    transition: var(--transition);
+}
+
+
+.wrapper  a:hover {
+    color: #ff6900 !important;
+    transition: .5s;
+}
+a:hover, .wrapper nav.hd__nav ul > a{
+    transition: .5s;
+    color:var(--accent)
+
+}
+
+
+.header__social > svg > path {
+    transition: fill var(--transition);
+  }
+  
+  .header__social:hover > svg > path {
+    fill: var(--accent);
+  }
+
+.checkbtn {
+    font-size:30px;
+    color: white ;
+    float: right;
+    line-height: 80px;
+    margin-right:40px;
+    cursor:pointer;
+}
+
+#check {
+    display: none;
+}
+
+.checkbtn{
+    display: none;
+}
+
+@media(max-width:1024px) {
+    label.logo {
+        padding: 27px 100px;
+        font-size: 25px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .checkbtn{
+        margin-top: 10px;
+    }
+
+}
+
+@media(max-width:895px) {
+    .checkbtn {
+        display: block;
+        margin-right: 15px;
+    }
+    ul {
+        position:fixed;
+        width: 100%;
+        height:100vh;
+        background: var(--hero-second);
+        top:var(--line-height);
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px ;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,a.active {
+        background: none;
+        color: var(--text1);
+
+    }
+    
+    #check:checked ~ ul {
+        left:0;
+    }
+    label.logo {
+        padding: 27px 100px;
+        font-size: 15px !important;
+    }
+
+
+.header__nav {
+    height: 75px;
+   
+    
+}
+
+}
+
+
+.hero {
+
+}
+
+.experience {
+
+}
+
+.about__company{
+
+}
+
+.service {
+
+}
+
+.project {
+
+}
+
+.feedback {
+
+}
+
+.footer {
+
+}
