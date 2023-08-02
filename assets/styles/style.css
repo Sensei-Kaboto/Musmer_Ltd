@@ -1,14 +1,16 @@
+/* --------------------------- Fondamental ------------------------ */
 :root{
     --bg-body:hwb(225 2% 84%);
     --hero-first:#ffffff;
     --hero-second: #ff6900;
+    --hero-bg: hwb(209 67% 24% / 0.425);
     --text1: #abb8c3;
     --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
     --ft-logo:35px;
     --line-height:80px;
     --ft-weight:bold;
     --transition: .5s;
-    --accent:var(--hero-second);
+    --accent:hwb(51 1% 1%);
 
 }
 
@@ -24,7 +26,7 @@
 
 body{
     font-family: var(--bs-font-sans-serif);
-   
+ 
 }
 
 
@@ -36,63 +38,9 @@ html {
 html,
 body {
   overflow-x: hidden;
-}
-
-
-.header {
-    display: inline;
-    gap: 2rem;
-    height: 100vh;
-    margin: 0;
-}
-
-.header__info{
-    /* font-size: 2rem; */
-
-
-}
-
-.header__nav {
-    background-color: var(--bg-body);
-    height: 80px;
-    width: 100%;
-}
-
-.hd__nav {
-    background-color: var(--bg-body);
-    display: flex;
-    overflow: hidden;
-    gap:0px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.item , .item ul li a {
-    color: white;
-    font-family: monospace;
-    font-size: 12px !important;
-  }
   
-.item1 {
-
 }
 
-.item2 {
-    
-    margin-right: 20px;
-}
-
-
-
-label.logo {
-    color: var(--hero-first);
-    line-height: var(--line-height);
-    padding: 30px 100px;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: var(--hero-second);
-    
-}
 
 nav ul{
     float: right;
@@ -109,7 +57,6 @@ nav ul li a {
     color: var(--hero-first);
     font-size: 17px;
     padding: 7px 13px;
-    border-radius: 3px;
     text-transform: uppercase;
 }
 
@@ -134,7 +81,7 @@ ul.option a.active  {
 
 
 .wrapper  a:hover {
-    color: #ff6900 !important;
+    color: var(--accent) !important;
     transition: .5s;
 }
 a:hover, .wrapper nav.hd__nav ul > a{
@@ -143,6 +90,54 @@ a:hover, .wrapper nav.hd__nav ul > a{
 
 }
 
+/* -------- bg_hero section ------------------ */
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.425)), url("../images/logo4.jpg")no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    border-radius: 0 0 30% 30%;
+}
+
+/* ---------- header ----------------*/
+
+.header {
+    display: inline;
+    gap: 2rem;
+    height: 100vh;
+    margin: 0;
+}
+
+.header__nav {
+    /* background-color: var(--bg-body); */
+    height: 80px;
+    width: 100%;
+
+}
+
+.hd__nav {
+    /* background-color: var(--bg-body); */
+    display: flex;
+    overflow: hidden;
+    gap:0px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.item , .item ul li a {
+    color: white;
+    font-family: monospace;
+    font-size: 12px !important;
+  }
+  
+
+.item2 {
+    
+    margin-right: 20px;
+}
 
 .header__social > svg > path {
     transition: fill var(--transition);
@@ -152,7 +147,7 @@ a:hover, .wrapper nav.hd__nav ul > a{
     fill: var(--accent);
   }
 
-.checkbtn {
+  .checkbtn {
     font-size:30px;
     color: white ;
     float: right;
@@ -169,6 +164,93 @@ a:hover, .wrapper nav.hd__nav ul > a{
     display: none;
 }
 
+label.logo {
+    color: var(--hero-first);
+    line-height: var(--line-height);
+    padding: 15px 50px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: var(--hero-bg);
+}
+
+/* --------------- hero text ----------------------- */
+.hero {
+    
+
+}
+
+.hero__container{
+    width: 90%;
+    height: 100%;
+    text-transform: uppercase;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+
+.hero__container .info h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--hero-first);
+}
+
+.hero__container .info h6{
+    margin-top: 7rem;
+    font-size: 1rem;
+    margin-bottom: .4rem;
+    color: var(--hero-first);
+}
+
+.hr__color{
+    color: var(--accent) !important;
+}
+
+.hero__container .info a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--text1);
+    color: var(--hero-first);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0.3em 1em;
+    margin-top: 1.7rem;
+    text-transform: capitalize;
+    transform: var(--transition);
+
+}
+
+
+/* -------------------------------------------------- */
+
+.experience {
+
+}
+
+.about__company{
+
+}
+
+.service {
+
+}
+
+.project {
+
+}
+
+.feedback {
+
+}
+
+.footer {
+
+}
+
+
+/* ------------------- Media ---------------------------- */
 @media(max-width:950px) {
     label.logo {
         padding: 27px 100px;
@@ -186,6 +268,7 @@ a:hover, .wrapper nav.hd__nav ul > a{
         display: none;
     }
 }
+
 
 @media(max-width:895px) {
     .checkbtn {
@@ -234,34 +317,5 @@ a:hover, .wrapper nav.hd__nav ul > a{
     .header__nav {
         height: 75px;        
     }
-
-}
-
-
-.hero {
-
-}
-
-.experience {
-
-}
-
-.about__company{
-
-}
-
-.service {
-
-}
-
-.project {
-
-}
-
-.feedback {
-
-}
-
-.footer {
 
 }
