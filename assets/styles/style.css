@@ -11,6 +11,8 @@
     --ft-weight:bold;
     --transition: .5s;
     --accent:hwb(51 1% 1%);
+    --bg--button : #4646bb;
+    --bg--service : hsl(240, 42%, 12%);
 
 }
 
@@ -96,9 +98,11 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.425)), url("../images/logo4.jpg")no-repeat;
     background-size:cover;
     background-position: center;
-    height: 100vh;
+    height: 140vh;
     width: 100%;
-    border-radius: 0 0 30% 30%;
+    border-radius: 15%/20%   ;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 /* ---------- header ----------------*/
@@ -114,6 +118,7 @@ header {
     /* background-color: var(--bg-body); */
     height: 80px;
     width: 100%;
+    /* position: fixed; */
 
 }
 
@@ -198,20 +203,20 @@ label.logo {
 }
 
 .hero__container .info h6{
-    margin-top: 7rem;
+    margin-top: 13rem;
     font-size: 1rem;
     margin-bottom: .4rem;
     color: var(--hero-first);
 }
 
 .hr__color{
-    color: var(--accent) !important;
+    color: var(--accent) ;
 }
 
 .hero__container .info a {
     text-decoration: none;
     display: inline-block;
-    background-color: var(--text1);
+    background-color: var(--bg--button);
     color: var(--hero-first);
     border-radius: 4px;
     font-size: 1.2rem;
@@ -222,19 +227,71 @@ label.logo {
 
 }
 
+.hero__container .info a:hover{
+    color: var(--accent);
+    background: none;
+    transition: var(--transition);
+
+}
+
+.hero .info {
+    margin-left: 30px;
+}
+
 
 /* -------------------------------------------------- */
+/* -------------- about the company -------------------- */
+.about__company {
+    width: 90%;
+    height: 100%;
+    max-width: 1000px;
+    margin:  auto;
+    text-align: center; 
+    padding: 40px;
+}
 
-.experience {
+.about__sub h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about__sub p {
+    font-size: 1rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    line-height: 1.6rem;
+}
+
+.about__sub a {
+    text-decoration: none;
+    display: inline-block;
+    background-color:var(--bg--button);
+    color: var(--hero-first);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0.3em 1em;
+    margin-top: 1.7rem;
+    text-transform: capitalize;
+    transform: var(--transition);
 
 }
 
-.about__company{
+.about__sub a:hover{
+    color: var(--hero-second);
+    background: none;
+    transition: var(--transition);
 
 }
-
+/* --------------------------------------------------- */
+/* ------------------ Services ------------------- */
 .service {
-
+    height: 140vh;
+    width: 100%;
+    background-color: var(--bg--service);
+    border-radius: 15%/20%   ;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .project {
@@ -267,6 +324,14 @@ label.logo {
     .wrapper{
         display: none;
     }
+
+    .header__bg{
+        height: 100vh;
+        width: 100%;
+    }
+    .hero__container .info h6{
+        margin-top: 15rem;
+    }
 }
 
 
@@ -295,15 +360,15 @@ label.logo {
         font-size: 20px;
     }
 
-    a:hover{
+    /* a:hover{
         background: none;
         color: var(--text1);
 
-    }
-    ul.option a.active  {
+    } */
+    /* ul.option a.active  {
         color: var(--hero-first);
         background:none;
-    }
+    } */
     
     #check:checked ~ ul {
         left:0;
@@ -316,6 +381,15 @@ label.logo {
 
     .header__nav {
         height: 75px;        
+    }
+
+    .header__bg{
+        height: 100vh !important;
+        width: 100%;
+    }
+
+    .hero__container .info h6{
+        margin-top: 15rem;
     }
 
 }
