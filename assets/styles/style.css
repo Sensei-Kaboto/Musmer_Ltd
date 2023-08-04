@@ -1,11 +1,12 @@
 /* --------------------------- Fondamental ------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,200;1,300&family=Space+Grotesk:wght@500;700&display=swap');
 :root{
     --bg-body:hwb(225 2% 84%);
     --hero-first:#ffffff;
     --hero-second: #ff6900;
     --hero-bg: hwb(209 67% 24% / 0.425);
     --text1: #abb8c3;
-    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+    --bs-font-sans-serif: 'Poppins', sans-serif;
     --ft-logo:35px;
     --line-height:80px;
     --ft-weight:bold;
@@ -15,7 +16,8 @@
     --bg--service : hsl(267, 43%, 21%);
 
 }
-
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Space Grotesk', sans-serif; */
 *,
 *::before,
 *::after{
@@ -41,7 +43,7 @@ html {
 html,
 body {
   overflow-x: hidden;
-  height: 100vh;
+  /* height: 100vh; */
   
 }
 
@@ -199,15 +201,16 @@ label.logo {
 }
 
 .hero__container .info h2{
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    line-height: 1em;
+    margin-bottom: .5rem;
     color: var(--hero-first);
 }
 
 .hero__container .info h6{
-    margin-top: 13rem;
+    margin-top: 8rem;
     font-size: 1rem;
-    margin-bottom: .4rem;
+    margin-bottom: .1rem;
     color: var(--hero-first);
 }
 
@@ -288,7 +291,7 @@ label.logo {
 /* --------------------------------------------------- */
 /* ------------------ Services titles ------------------- */
 .bg__service__title{
-    height: 20vh;
+    /* height: 20vh; */
     width: 100%;
     background:linear-gradient(rgba(0, 0, 0, 0.432),rgba(0, 0, 0, 0.411)) var(--bg--service);
     /* border-radius: 15%/50%   ;
@@ -342,7 +345,7 @@ label.logo {
     margin-top: calc( var(--bs--gutter-y)* -1);
     margin-right: calc(var(--bs-gutter-x)/ -2);
     margin-left: calc(var(--bs-gutter-x)/ -2);
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .services__container .columns {
@@ -385,17 +388,87 @@ label.logo {
  }
 
 
+/* ------------------------------------------------------------- */
 
-
-.feedback {
-
-}
-
+/* ----------- Footer ---------------- */
 .footer {
+    background-color: var(--bg--service);
+    /* height: 100vh; */
+    padding: 70px 0;
+}
+
+.footer__container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__col ul {
+    list-style: none;
+}
+
+.footer__col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer__col h4 {
+    font-size: 18px;
+    color:var(--hero-first);
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer__col h4::before {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
 
 }
 
+.footer__col ul li a:not(:last-child){
+    margin-bottom: 10px;
+}
 
+.footer__col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color:#ffffff;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block ;
+    transition: all 0.3s ease;
+}
+
+.footer__col ul li a:hover{
+    color:var(--accent);
+    padding-left: 8px;
+}
+
+.footer__col .social__links{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color:#ffffff
+}
 /* ------------------- Media ---------------------------- */
 @media(max-width:1000px) {
     label.logo {
