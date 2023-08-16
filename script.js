@@ -1,8 +1,6 @@
 const header = document.querySelector("header");
 const sliderTextContent = document.getElementById("slider_text_content");
 
-const images = ["./assets/images/logo4.jpg", "./assets/images/afitap.jpg", "./assets/images/brand1.jpg"];
-
 const slider = [
   {
     image: "./assets/images/logo4.jpg",
