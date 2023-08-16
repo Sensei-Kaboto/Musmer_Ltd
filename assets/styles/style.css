@@ -102,7 +102,7 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.425)), url("../images/logo4.jpg")no-repeat;
     background-size:cover;
     background-position: center;
-    height: 120vh;
+    height: 100vh;
     width: 100%;
     /* border-radius: 15%/20%   ;
     border-top-left-radius: 0;
